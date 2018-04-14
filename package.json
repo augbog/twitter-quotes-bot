@@ -1,0 +1,25 @@
+{
+  "name": "twitter-quotes-bot",
+  "version": "1.0.0",
+  "description": "Source code that powers @motivatemeagain",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter",
+    "bot"
+  ],
+  "author": "Augustus Yuan",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "request": "^2.85.0",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
