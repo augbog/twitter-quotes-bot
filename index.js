@@ -12,6 +12,7 @@ var client = new Twitter({
 
 request("http://quotes.rest/qod.json?category=inspire&maxlength=250", (error, response, body) => {
   if (error) {
+    console.log('An error occured.');
     console.log(error);
   }
   if (response && response.statusCode === 200) {
@@ -23,13 +24,12 @@ request("http://quotes.rest/qod.json?category=inspire&maxlength=250", (error, re
       { status: `${quoteToTweet}` },
       (error, tweet, response) => {
         if (!error) {
-          console.log(tweet);
+          console.log('Success! Tweet sent!');
+          console.log(`$(quoteToTweet`);
         }
-        console.log(error);
-        console.log(response);
       }
     );
   } else {
-    console.log(JSON.stringify(response));
+    console.log('Error occurred and response received was not 200.');
   }
 });
